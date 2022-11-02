@@ -1,0 +1,290 @@
+@font-face {
+	font-family: 'Onest';
+	src: local("Onest Regular"), url('fonts/Onest-Regular.woff2') format('woff2'), url('fonts/Onest-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Onest Bold';
+	src: local("Onest Regular"), url('fonts/Onest-Bold.woff2') format('woff2'), url('fonts/Onest-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Onest Medium';
+	src: local("Onest Regular"), url('fonts/Onest-Light.woff2') format('woff2'), url('fonts/Onest-Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@media screen and (max-width: 1400px) {
+	body{
+		width: 1400px;		
+	}
+}
+
+body{
+    background-color: #F5F5F5;
+    margin: 0 auto;
+}
+
+.blocking{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.block-center{
+    text-align: center;
+}
+
+.button{
+    background-color: #36569C;
+    color: #FFFFFF;
+}
+
+.first-block{
+    background-image: url("images/fon0.png");
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 130vh; 
+}
+
+.eye,  .small-eye{
+    transition: transform .3s linear; 
+}
+  
+.little-ghost:hover .eye {
+    transform:translate(0px,9px);
+}
+.little-ghost:hover .small-eye{
+    transform:translate(0px,6px);
+}
+
+
+.second-block{
+    background-image: url("images/fon1.png");
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-position: top; */
+    /* background-attachment: no-repeat; */
+    /* background-size: auto; */
+    /* height: 101vh;  */
+    width: 100%;
+}
+
+.thi-fourth-block{
+    background-image: url("images/fon3-4.png");
+    background-size: 100%;
+    width: 100%;
+    height: 1750px; 
+    background-repeat: no-repeat;
+}
+
+.third-block{
+    background-image: url("images/fon2.png");
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    /* background-position: top; */
+    background-attachment: no-repeat;
+    /* background-size: auto; */
+    /* height: 101vh;  */
+    width: 100%;
+}
+
+.four-block{
+    background-image: url("images/fon3.png");
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    /* background-position: top; */
+    /* background-attachment: no-repeat; */
+    /* background-size: auto; */
+    /* height: 101vh;  */
+    width: 100%;
+}
+
+.last-block{
+    background-image: url("images/lastest.png");
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    /* background-position: top; */
+    /* background-attachment: no-repeat; */
+    /* background-size: auto; */
+    height: 900px; 
+    margin-top: 6vh;
+    /* width: 100%; */
+}
+
+.center{
+    text-align: center ;
+}
+
+.container{
+    width: 100%;
+}
+
+
+
+.picture{
+    padding: 3% 3% 3% 3%;
+}
+ 
+.btn-block{
+    display: inline-grid;
+    justify-content: center;
+}
+
+
+.icon {
+    order:-1;
+    fill:#7F878F;
+    transition: transform .7s ease-in-out;
+}
+
+.btn-near:hover{
+    cursor: pointer;
+}
+
+.btn-near:hover ~ .icon {
+    fill:#36569C;
+    transform: rotate(50deg);
+}
+
+.fuzzy{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px);
+}
+
+
+
+.inner-form{
+
+    padding: 2% 2% 2% 2% ;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    justify-content: center;
+    background-color: white;
+
+
+    box-shadow: 0px 7.65143px 15.3029px rgba(54, 58, 120, 0.1);
+    border-radius: 15px;
+    border: none;
+}
+
+.textarea{
+    display: block;
+    width: 265px; 
+
+    overflow: hidden;
+    resize: both;
+    min-height: 25px;
+    line-height: 20px;
+}
+  
+.textarea[contenteditable]:empty::before {
+    content: "Связаться с аватаростроителями";
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: #9092B0;
+}
+
+.tiny-input{
+    border: none;
+    width: 265px; 
+}
+
+.tiny-input:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 3px lightskyblue;
+}
+
+.button-small{
+    background: #1E62F6;
+    border-radius: 10px;
+    padding: 2% 3% 2% 3%;
+    border: none;
+    text-align: left;
+    
+}
+
+buttext{
+    color: white;
+    padding-top: 2%;
+    font-family: Onest;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    vertical-align: middle;
+}
+
+
+
+.text{
+    font-family: "Onest"; /* Onest */
+}
+
+.text-bold{
+    font-family: "Onest Bold"; /* Onest */
+}
+.text-medium{
+    font-family: "Onest Medium"; /* Onest */
+}
+
+.text-big{
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 100%;
+}
+
+.text-blue{
+    color: #36569C;
+    text-align: center ;
+}
+
+
+svg .first-line,.second-line,.third-line{
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.first-line.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+
+.second-line.element-show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
+.third-line.element-show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
+/* Стили таймера */
+
+.timer__items {
+    display: flex;
+    font-size: 52px;
+    justify-content:center;
+    flex-flow: row nowrap;
+}
+
+.timer__item {
+   display: inline;
+}

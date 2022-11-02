@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Onest';
+	src: url('Onest-Thin.woff2') format('woff2'), url('Onest-Thin.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+
