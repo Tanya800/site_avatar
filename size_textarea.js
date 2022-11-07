@@ -4,19 +4,22 @@ $(".btn-near").on("mouseover", function(e){
 
     if(id =='first-btn'){
         $('#second-btn').addClass('fuzzy');
-        $('#second-btn').siblings().addClass('fuzzy');
+        console.log();
+        $('#second-btn').siblings()[0].classList.add('fuzzy');
+
+
     }
     else{
         $('#first-btn').addClass( 'fuzzy');
-        $('#first-btn').siblings().addClass( 'fuzzy');
+        $('#first-btn').siblings()[0].classList.add('fuzzy');
     }
 });
 
 $(".btn-near").on("mouseout", function(e){
 
-    $(".btn-near").removeClass('fuzzy')
-    $(".btn-near").siblings().removeClass('fuzzy')
-
+    $.each($(".fuzzy"), function(i, v){
+        v.classList.remove('fuzzy')
+    });
 });
 
 
@@ -97,3 +100,52 @@ $('#span-contenteditable').keypress(function() {
     e.stopPropagation();
   }
 });
+
+function changeFlipdownPadding() {
+
+    width_example_block = $(".example")[0].offsetWidth;
+    flip_block = $("#flipdown")[0];
+    width_flipdown_block = flip_block.childNodes[0].clientWidth * 4;
+    padding_left = (width_example_block - width_flipdown_block)/2;
+    flip_block.style.paddingLeft = padding_left  + "px";
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Unix timestamp (in seconds) to count down to
+    var twoDaysFromNow = (new Date(2022, 10, 14, 12, 0, 0, 0).getTime() / 1000) ;
+  
+    // Set up FlipDown
+    var flipdown = new FlipDown(twoDaysFromNow)
+  
+      // Start the countdown
+      .start()
+  
+      // Do something when the countdown ends
+      .ifEnded(() => {
+        console.log('The countdown has ended!');
+      });
+
+    // const windowInnerWidth = document.documentElement.clientWidth;
+    // console.log(windowInnerWidth);
+
+
+    changeFlipdownPadding();
+
+  });
+
+$("#btn_send_message").on('click',function (e){
+
+    message = e.currentTarget.previousElementSibling.textContent;
+
+    if (message.length > 0){
+        href = "mailto:support@avatar.su?";
+        href += 'body=' + message.replaceAll(' ','+');
+        window.location.href = href;
+    }
+});
+
+window.onresize = function (event) {
+    changeFlipdownPadding();
+};
