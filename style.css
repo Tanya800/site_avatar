@@ -178,7 +178,6 @@ body{
     flex-flow: row nowrap;
     align-items: center;
 
-    justify-content: center;
     background-color: white;
 
 
@@ -187,14 +186,21 @@ body{
     border: none;
 }
 
+.left-form {
+    display: flex;
+    flex-grow: 2;
+}
+
 .textarea{
     display: block;
-    width: 265px; 
 
     overflow: hidden;
-    resize: both;
+    /* resize: vertical; */
     min-height: 25px;
+    max-height: 250px;
+    overflow: scroll;
     /*line-height: 20px;*/
+    word-break: break-all;
 }
   
 .textarea[contenteditable]:empty::before {
@@ -207,7 +213,8 @@ body{
 
 .tiny-input{
     border: none;
-    width: 265px; 
+    width: 300px;
+    text-align: start;
 }
 
 .tiny-input:focus{
@@ -222,7 +229,8 @@ body{
     padding: 2% 3% 2% 3%;
     border: none;
     text-align: left;
-    
+    margin-top: auto;
+    flex-grow: 1;
 }
 
 buttext{

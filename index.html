@@ -627,7 +627,7 @@
         <div style="padding: 0% 25% 0% 25%;text-align: center;">
             <!-- revealator-slideup revealator-once -->
             <div class=""
-                 style="background-color: #356ADD;width: 700px;height:270px;padding: 7% 4% 3% 4% ;border-radius: 20px;">
+                 style="background-color: #356ADD;width: 700px;height:270px;padding: 7% 4% 3% 4% ;border-radius: 20px;  height: min-content;">
 
                 <div class="col">
                     <div class="text" style="
@@ -649,22 +649,24 @@
                         Напишите нам, и мы ответим незамедлительно
                     </div>
 
-                    <div style="text-align: center;padding:3% 12% 1% 12% ;">
+                    <div style="text-align: center;padding:3% 12% 1% 12%; min-width: 100px;">
                         <div class="inner-form">
+                            <div class="left-form">
 
-                            <img src="images/icon_mail.png">
-
-                            <span
-                                    id="span-contenteditable"
-                                    class=" tiny-input text textarea"
-                                    role="textbox"
-                                    contenteditable></span>
-
-
+                                <img src="images/icon_mail.png" style="align-self: start; margin: 4px;">
+    
+                                <span
+                                        id="span-contenteditable"
+                                        class="tiny-input text textarea"
+                                        role="textbox"
+                                        contenteditable></span>
+                            </div>
                             <button id="btn_send_message" class="button-small text">
                                 <img src="images/icon_send.png">
                                 <buttext>Отправить</buttext>
                             </button>
+
+
 
                         </div>
                     </div>
