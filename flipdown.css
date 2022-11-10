@@ -243,7 +243,7 @@
 @media (max-width: 550px) {
 
   .flipdown {
-    width: 312px;
+    /*width: 312px;*/
     height: 70px;
   }
 
@@ -259,11 +259,11 @@
   .flipdown .rotor-top,
   .flipdown .rotor-bottom,
   .flipdown .rotor:after {
-    width: 30px;
+    /*width: 30px;*/
   }
 
   .flipdown .rotor-group {
-    padding-right: 20px;
+    /*padding-right: 20px;*/
   }
 
   .flipdown .rotor-group:last-child {

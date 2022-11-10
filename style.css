@@ -51,6 +51,7 @@ body{
     /* background-attachment: fixed; */
     background-size: 100%;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .eye,  .small-eye{
@@ -74,15 +75,17 @@ body{
     /* background-attachment: no-repeat; */
     /* background-size: auto; */
     min-height: 1000px;
+    height: 100vh;
     width: 100%;
 }
 
 .thi-fourth-block{
     background-image: url("images/fon3-4.png");
-    background-size: 100%;
+    background-size: 100% 100%;
     width: 100%;
-    min-height: 1750px;
+    min-height: 1800px;
     background-repeat: no-repeat;
+    /*height: 200vh;*/
 }
 
 .third-block{
@@ -108,26 +111,35 @@ body{
 }
 
 .last-block{
-    background-image: url("images/lastest.png");
+    background-image: url("images/last_fon.png");
     /* background-attachment: fixed; */
-    background-size: 100%;
+    background-size: 100% 100%;;
     /* background-position: top; */
     /* background-attachment: no-repeat; */
     /* background-size: auto; */
-    height: 900px; 
-    margin-top: 6vh;
-    /* width: 100%; */
+    /*height: 100vh;*/
+    min-height: 1000px;
+    /*margin-top: 6vh;*/
+     width: 100%;
 }
 
 .second-pic{
-    margin-top: -85px;
+    margin-top: -10vh;
     margin-right:8vh;
     text-align: center;
     min-height: 900px;
+    height:80vh ;
 }
 
 .center{
     text-align: center ;
+}
+
+.block-center-flex{
+    align-items: center;
+    display: flex;
+    text-align: center;
+    flex-flow: column nowrap;
 }
 
 .container{
@@ -217,6 +229,12 @@ body{
 }
 
 .button-small{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-self: baseline;
+
+    margin-left: 10px;
     background: #1E62F6;
     border-radius: 10px;
     padding: 2% 3% 2% 3%;
@@ -284,19 +302,13 @@ svg .first-line,.second-line,.third-line{
     transform: translateY(0%);
 }
 
-/* Стили таймера */
-
-.timer__items {
-    display: flex;
-    font-size: 52px;
-    justify-content:center;
-    flex-flow: row nowrap;
+.form-block{
+    background-color: #356ADD;
+    min-width: 700px;
+    min-height:270px;
+    padding: 7% 4% 3% 4% ;
+    border-radius: 20px;
 }
-
-.timer__item {
-   display: inline;
-}
-
 
 .example {
     margin-left: auto;

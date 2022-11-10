@@ -114,7 +114,7 @@ function changeFlipdownPadding() {
 document.addEventListener('DOMContentLoaded', () => {
 
     // Unix timestamp (in seconds) to count down to
-    var twoDaysFromNow = (new Date(2022, 10, 14, 12, 0, 0, 0).getTime() / 1000) ;
+    var twoDaysFromNow = (new Date(2022, 10, 26, 12, 0, 0, 0).getTime() / 1000) ;
   
     // Set up FlipDown
     var flipdown = new FlipDown(twoDaysFromNow)
