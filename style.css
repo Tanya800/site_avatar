@@ -45,14 +45,7 @@ body{
     color: #FFFFFF;
 }
 
-.first-block{
-    min-height: 900px;
-    background-image: url("images/fon0.png");
-    /* background-attachment: fixed; */
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
+
 
 .eye,  .small-eye{
     transition: transform .3s linear; 
@@ -65,6 +58,15 @@ body{
     transform:translate(0px,6px);
 }
 
+.first-block{
+    min-height: 900px;
+    background-image: url("images/fon0.png");
+    /* background-attachment: fixed; */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
 
 .second-block{
     background-image: url("images/fon1.png");
@@ -81,43 +83,25 @@ body{
     background-image: url("images/fon3-4.png");
     background-size: 100% 100%;
     width: 100%;
-    min-height: 1800px;
+    /*min-height: 1800px;*/
     background-repeat: no-repeat;
     /*height: 200vh;*/
 }
 
 .third-block{
-    background-image: url("images/fon2.png");
-    /* background-attachment: fixed; */
-    background-size: 100%;
-    /* background-position: top; */
-    /*background-attachment: no-repeat;*/
-    /* background-size: auto; */
-    /* height: 101vh;  */
-    width: 100%;
+    min-height: 900px;
+    position: relative;
 }
 
 .four-block{
-    background-image: url("images/fon3.png");
-    /* background-attachment: fixed; */
-    background-size: 100%;
-    /* background-position: top; */
-    /* background-attachment: no-repeat; */
-    /* background-size: auto; */
-    /* height: 101vh;  */
-    width: 100%;
+    min-height: 900px;
 }
 
 .last-block{
     background-image: url("images/last_fon.png");
     /* background-attachment: fixed; */
     background-size: 100% 100%;;
-    /* background-position: top; */
-    /* background-attachment: no-repeat; */
-    /* background-size: auto; */
-    /*height: 100vh;*/
     min-height: 1000px;
-    /*margin-top: 6vh;*/
      width: 100%;
 }
 
@@ -178,6 +162,13 @@ body{
     filter: blur(5px);
 }
 
+.half-blue-block{
+    padding: 5% 25% 5% 25%;
+    text-align: center;
+    align-self: center;
+    min-width: 300px;
+    background-color: rgba(38,70,137,0.74);
+}
 
 
 .inner-form{

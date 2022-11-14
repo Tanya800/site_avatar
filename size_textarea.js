@@ -72,15 +72,6 @@ $(window).scroll(function() {
             thir_line.classList.add('element-show');
         }, (3 * 1000));
     }
-     if (currentHeight > sec_position.top) {
-        
-        
-        
-    }
-     if (currentHeight > thir_position.top) {
-        
-        
-    }
 });
 
 
@@ -127,11 +118,31 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('The countdown has ended!');
       });
 
-    // const windowInnerWidth = document.documentElement.clientWidth;
-    // console.log(windowInnerWidth);
-
-
     changeFlipdownPadding();
+
+    previous_min_height = 900;
+    const windowInnerWidth = document.documentElement.clientWidth
+    const windowInnerHeight = document.documentElement.clientHeight
+    // console.log(windowInnerHeight);
+    $(".first-block").css('min-height',windowInnerHeight);
+    $(".second-block").css('min-height',windowInnerHeight);
+    $(".third-block").css('min-height',windowInnerHeight);
+    $(".four-block").css('min-height',windowInnerHeight);
+    $(".last-block").css('min-height',windowInnerHeight);
+    $(".second-pic").css('min-height',windowInnerHeight);
+
+    let man_svg = $("#man-svg")[0];
+
+    console.log(man_svg.getAttribute('height'));
+    let newWidth = (man_svg.getAttribute('height') / previous_min_height) * windowInnerHeight;
+    man_svg.setAttribute("height",newWidth+'px');
+
+    let last_ghost = $("#last_ghost_img")[0];
+    let blue_last_block = $(".half-blue-block")[0].offsetHeight;
+    let height_last_ghost = last_ghost.offsetHeight;
+    let padding_last_block = (windowInnerHeight - blue_last_block - height_last_ghost) /2;
+    last_ghost.style.paddingTop = padding_last_block + 'px';
+
 
   });
 
@@ -160,3 +171,5 @@ window.onresize = function (event) {
     console.log(height_second_block)
     changeFlipdownPadding();
 };
+
+
