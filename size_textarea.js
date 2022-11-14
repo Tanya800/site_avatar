@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let man_svg = $("#man-svg")[0];
 
-    console.log(man_svg.getAttribute('height'));
+
     let newWidth = (man_svg.getAttribute('height') / previous_min_height) * windowInnerHeight;
     man_svg.setAttribute("height",newWidth+'px');
 
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let blue_last_block = $(".half-blue-block")[0].offsetHeight;
     let height_last_ghost = last_ghost.offsetHeight;
     let padding_last_block = (windowInnerHeight - blue_last_block - height_last_ghost) /2;
-    last_ghost.style.paddingTop = padding_last_block + 'px';
+    last_ghost.style.marginTop = padding_last_block + 'px';
 
 
   });
@@ -167,8 +167,7 @@ $("#btn_send_message").on('click',function (e){
 });
 
 window.onresize = function (event) {
-    height_second_block = $(".second-block")[0].offsetHeight;
-    console.log(height_second_block)
+
     changeFlipdownPadding();
 };
 
