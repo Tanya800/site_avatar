@@ -49,7 +49,7 @@ body{
     min-height: 900px;
     background-image: url("images/fon0.png");
     /* background-attachment: fixed; */
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -69,14 +69,12 @@ body{
 .second-block{
     background-image: url("images/fon1.png");
     /* background-attachment: fixed; */
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    /* background-position: top; */
-    /* background-attachment: no-repeat; */
-    /* background-size: auto; */
-    min-height: 1000px;
+    min-height: 900px;
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 
 .thi-fourth-block{
@@ -124,7 +122,7 @@ body{
 }
 
 .second-pic{
-    margin-top: -10vh;
+    margin-top: -85px;
     margin-right:8vh;
     text-align: center;
     min-height: 900px;

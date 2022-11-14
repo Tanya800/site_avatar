@@ -140,12 +140,23 @@ $("#btn_send_message").on('click',function (e){
     message = e.currentTarget.previousElementSibling.textContent;
 
     if (message.length > 0){
-        href = "mailto:support@avatar.su?";
-        href += 'body=' + message.replaceAll(' ','+');
-        window.location.href = href;
+
+        fetch('https://avatar.su/counter/')
+            .then(response => response.json())
+            .then(commits => {
+                href = "mailto:support@avatar.su?";
+                href += 'subject=' + 'Обращение с avatar.su №' + commits.current_value + '&';
+                href += 'body=' + message;
+                window.location.href = href;
+            });
+
+
     }
+
 });
 
 window.onresize = function (event) {
+    height_second_block = $(".second-block")[0].offsetHeight;
+    console.log(height_second_block)
     changeFlipdownPadding();
 };
